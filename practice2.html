@@ -7,21 +7,22 @@
         <title>Document</title>
     </head>
     <body>
+        <h2>소수 판별 프로그램</h2>
         <script>
             // 사용자가 입력한 숫자가 소수인지 아닌지 알려주는 프로그램
             const input = Number(prompt("숫자를 입력하세요."));
 
             const n = input / 2;
-            let answer = true;
+            let isPrime = true;
             for (let i = 2; i < n; i++) {
                 if ((n % i) === 0) {
                     document.write(`${input}은 소수가 아닙니다.`);
-                    answer = false;
+                    isPrime = false;
                     break;
                 }
             }
 
-            if (answer) {
+            if (isPrime) {
                 document.write(`${input}은 소수입니다.`);
             }
         </script>
