@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gugudan1_input</title>
+    </head>
+
+    <body>
+        <h1>✏️ 구구단 출력하기</h1>
+        출력할 단수: <input type="text" class="num"/>
+        <button onclick="runGugudan()">확인</button>
+        <script>
+            function runGugudan() {
+                // input 태그 속성값 가져오기 
+                let sNum = document.querySelector(".num").value;
+                let n = Number(sNum);
+                document.write(`<h1>${n}단</h1>`);
+                for(let j = 1; j < 10; j++) {
+                    let answer = n * j;
+                    document.write(`${n} * ${j} = ${answer}` + "<br>");
+                }
+            }
+        </script>
+    </body>
+    
+</html>
