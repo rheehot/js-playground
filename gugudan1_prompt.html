@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gugudan1</title>
+</head>
+
+<body>
+    <script>
+        // prompt 문자열 꼭 주의! 숫자로 바꿔주기 
+        let n = Number(prompt("몇 단을 출력할까요?(숫자입력)"));
+        document.write(`<h1>${n}단</h1>`)
+        for(let i = 1; i < 10; i++) {
+            let answer = n * i
+            document.write(`${n} * ${i} = ${answer}` + "<br>");
+        }
+    </script>
+</body>
+
+</html>
