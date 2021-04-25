@@ -13,13 +13,18 @@
     <script>
         // prompt 문자열 꼭 주의! 숫자로 바꿔주기 
         let n = Number(prompt("몇 단까지 출력할까요?(숫자입력)"));
-        for(let i = 2; i < n + 1; i++)  {
-            document.write(`<h1>${i}단</h1>`)
-            for(let j = 1; j < 10; j++) {
-                let answer = i * j
-                document.write(`${i} * ${j} = ${answer}` + "<br>");
+        if (n < 2 || n > 9) {
+            // console.log("2 이상 9 이하의 숫자를 입력해 주세요."); -> 콘솔에 표시 
+            document.write("2 이상 9 이하의 숫자를 입력해 주세요.");
+        } else {
+            for(let i = 2; i < n + 1; i++) {
+                document.write(`<h1>${i}단</h1>`);
+                for(let j = 1; j < 10; j++) {
+                    let answer = i * j
+                    document.write(`${i} * ${j} = ${answer}` + "<br>");
+                }
+                document.write("<br>");
             }
-        document.write("<br>");
         }
     </script>
 </body>
