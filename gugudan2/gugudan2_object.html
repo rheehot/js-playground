@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan2_object</title>
+</head>
+<body>
+    <h1>🗃 객체 메소드 사용해보기</h1>
+    <script>
+        // main() 메소드는 프로그램을 시작하는 역할을 한다.
+        // 함수를 구구단 객체의 메소드로 변경한다. 
+        // this나 객체이름 잘 사용하기
+
+        gugudan = {};
+        gugudan.result = []
+        gugudan.calculate = function(num) {
+            for (let i = 0; i < 9; i++) {
+                this.result[i] = num * (i + 1); 
+            }
+            return this.result;
+        }
+        
+        gugudan.print = function(num, result) {
+            document.write(`<h2> ${num}단 </h2>`);
+            for (let i = 0; i < 9; i++) {
+                document.write(`${num} X ${i + 1} = ${num * (i + 1)}<br>`);
+            }
+        }
+
+        // main 함수 사용, 실행
+        function main() {
+            console.log("main 함수가 실행되었습니다.");
+            // main 함수에 루프 돌면 모든 단 수 출력 가능
+            for (let n = 2; n <= 9; n++) {
+                let answer = gugudan.calculate(n);
+                gugudan.print(n, answer);
+            }
+        }
+
+        // 필요하면 (설정 후) 파라미터로 받아오자.
+        main();
+    </script>
+</body>
+</html>
