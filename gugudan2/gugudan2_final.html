@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan2_final</title>
+</head>
+<body>
+    <h1>구구단 구현하기</h1>
+    <script>
+        let input = prompt("숫자 두 개를 입력해주세요. (예: 8,7)");
+        let inputSplit = input.split(',');
+        const n = Number(inputSplit[0]);
+        const m = Number(inputSplit[1]);
+
+        function calculate(num) {
+            let results = [];
+            for (let i = 0; i < 9; i++) {
+                results[i] = num * (i + 1);
+            }
+            return results;
+        }
+        
+        // 필요한  정보가 무엇인가? 
+        function print(num, results, a, b) {
+            document.write(`<h2> ${num}단 </h2>`);
+            for (let i = 0; i < 9; i++) {
+                if (num !== a) {
+                    document.write(`${num} X ${i + 1} = ${num * (i + 1)} <br>`);
+                } else {
+                    continue;
+                }
+            }
+            for (let i = 0; i < b; i++) {
+                if (num !== a) {
+                    continue;
+                } else {
+                    document.write(`${a} X ${i + 1} = ${a * (i + 1)} <br>`);
+                }
+            }
+        }
+
+        function main(a, b) {
+            document.write(`main함수가 실행되었습니다. ${a} X ${b}단 까지 구현`);
+            for (let i = 2; i <= a; i++) {
+                let answer = calculate(i);
+                print(i, answer, a, b);
+            }
+        }
+
+        main(n, m);
+    </script>
+</body>
+</html>
