@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan2_array</title>
+</head>
+<body>
+    <h1>배열로 구구단 구현하기</h1>
+    <script>
+        // typeof result -> object
+        let result = [];
+        const length = 9;
+        
+        for (let n = 2; n <= 9; n++) {
+            // calculate
+            for (let i = 1; i <= length; i++) {
+                result[i - 1] = n * i; 
+            }
+            
+            // print
+            document.write("<h2>" + n + "단</h2>")
+            for (let i = 1; i <= result.length; i++) {
+                let str = "";
+                str += n;
+                str += " X ";
+                str += i;
+                str += " = ";
+                str += result[i - 1];
+                str += "<br>";
+                document.write(str);
+            }
+        }
+    </script>
+</body>
+</html>
