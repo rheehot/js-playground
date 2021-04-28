@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan2_function</title>
+</head>
+<body>
+    <h1>함수 사용해보기</h1>
+    <script>
+    
+    function gugudan(num) {
+        let result = [];
+        for (let i = 1; i <= 9; i++) {
+            result[i - 1] = num * i; 
+        }
+        return result;
+    }
+        
+    function print(num, result) {
+        document.write(`<h2> ${num}단 </h2>`);
+        for (let i = 1; i <= 9; i++) {
+            document.write(`${num} X ${i} = ${num * i}<br>`);
+        }
+    }
+
+    // main 함수 사용, 실행
+    function main() {
+        console.log("main 함수가 실행되었습니다.");
+        // main 함수에 루프 돌면 모든 단 수 출력 가능
+        for (let n = 2; n <= 9; n++) {
+            let answer = gugudan(n);
+            print(n, answer);
+        }
+    }
+
+    // 필요하면 파라미터로 받아오자.
+    main();
+    </script>
+</body>
+</html>
