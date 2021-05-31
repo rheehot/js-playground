@@ -4,10 +4,16 @@ function main() {
     let out = document.getElementById("output");
     out.innerHTML = "계산기 구현하기";
 
-    console.log(10 + 2);
-    console.log(10 - 2);
-    console.log(10 * 2);
-    console.log(10 / 2);
+    let string1 = document.getElementById("input1");
+    let string2 = document.getElementById("input2");
+    
+    let num1 = Number(string1.value);
+    let num2 = Number(string2.value);
+
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+    console.log(num1 * num2);
+    console.log(num1 / num2);
+
 }
 
-main();
